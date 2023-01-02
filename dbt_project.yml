@@ -35,4 +35,6 @@ models:
   my_new_project:
     dimensions:
       materialized: table
+    staging:
+      materialized: view
 
