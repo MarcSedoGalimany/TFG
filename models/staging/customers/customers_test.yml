@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: customers
+    columns:
+      - name: orderid
+        tests:
+          - unique
+          - not_null
+      - name: region
+        tests:
+          - accepted_values:
+              values: ['North', 'South', 'West', 'East', 'Central']

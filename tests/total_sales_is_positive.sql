@@ -9,7 +9,7 @@ sales_is_positive as (
 select
     orderid,
     sum(sales) as total_sales
-from {{ ref('stg_customers' )}}
+from source
 group by 1
 having not(total_sales >= 0)
 
